@@ -7,7 +7,7 @@ A full-stack library management application built with NestJS (backend) and Reac
 - **Books Management**
   - Create, read, update, and delete books
   - Track book quantity/availability
-  - Categorize books by genre (21 predefined genres)
+  - Categorize books by genre
   - View books organized by author
   - Search and filter capabilities
 
@@ -15,25 +15,6 @@ A full-stack library management application built with NestJS (backend) and Reac
   - Create, read, update, and delete authors
   - Author biography support
   - View all books by each author
-
-- **Modern UI**
-  - Responsive design that works on desktop, tablet, and mobile
-  - Beautiful gradient styling with smooth animations
-  - Real-time data updates
-  - Intuitive user interface
-
-## 🛠️ Tech Stack
-
-### Backend
-- **NestJS** - Progressive Node.js framework
-- **Prisma** - Next-generation ORM
-- **PostgreSQL** - Relational database
-- **TypeScript** - Type-safe development
-
-### Frontend
-- **React 18** - Modern UI library
-- **Vite** - Fast build tool and dev server
-- **Modern CSS** - Gradient styling and animations
 
 ## 📋 Prerequisites
 
@@ -279,16 +260,4 @@ npm run build
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-Phenylbutazone
-
-## 🙏 Acknowledgments
-
-- NestJS team for the excellent framework
-- Prisma team for the amazing ORM
-- React team for the powerful UI library
