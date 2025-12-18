@@ -5,13 +5,11 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
-  // Enable CORS for frontend
   app.enableCors({
     origin: 'http://localhost:5173',
     credentials: true,
   });
   
-  // Global error handler for better error messages
   app.use((err, req, res, next) => {
     console.error('Global error:', err);
     res.status(err.status || 500).json({

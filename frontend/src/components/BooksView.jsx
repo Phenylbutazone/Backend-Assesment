@@ -8,7 +8,6 @@ function BooksView({ books, authors, onBookAdded, onBookUpdated, onBookDeleted }
   const [editingBook, setEditingBook] = useState(null)
   const [deletingBookId, setDeletingBookId] = useState(null)
 
-  // Get unique authors list
   const uniqueAuthors = authors || Array.from(
     new Map(books.map(book => [book.author.id, book.author])).values()
   )
@@ -52,7 +51,6 @@ function BooksView({ books, authors, onBookAdded, onBookUpdated, onBookDeleted }
     }
   }
 
-  // Group books by author
   const booksByAuthor = books.reduce((acc, book) => {
     const authorName = book.author.name
     if (!acc[authorName]) {
@@ -65,7 +63,6 @@ function BooksView({ books, authors, onBookAdded, onBookUpdated, onBookDeleted }
     return acc
   }, {})
 
-  // Sort authors alphabetically
   const sortedAuthors = Object.keys(booksByAuthor).sort()
 
   return (

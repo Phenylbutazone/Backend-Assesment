@@ -23,18 +23,14 @@ export class BooksService {
       include: { author: true },
     });
     
-    // Sort by author name, then published year, then title
     return books.sort((a, b) => {
-      // First sort by author name
       const authorCompare = a.author.name.localeCompare(b.author.name);
       if (authorCompare !== 0) return authorCompare;
       
-      // Then by published year (oldest first)
       const yearA = a.publishedYear ?? 0;
       const yearB = b.publishedYear ?? 0;
       if (yearA !== yearB) return yearA - yearB;
       
-      // Finally by title
       return a.title.localeCompare(b.title);
     });
   }

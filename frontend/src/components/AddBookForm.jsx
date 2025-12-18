@@ -71,7 +71,6 @@ function AddBookForm({ isOpen, onClose, authors, onSuccess }) {
 
       const newBook = await response.json()
       
-      // Reset form
       setFormData({ 
         title: '', 
         isbn: '', 

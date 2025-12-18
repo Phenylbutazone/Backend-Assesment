@@ -33,7 +33,6 @@ function AddAuthorForm({ isOpen, onClose, onSuccess }) {
 
       const newAuthor = await response.json()
       
-      // Reset form
       setFormData({ name: '', bio: '' })
       onSuccess(newAuthor)
       onClose()

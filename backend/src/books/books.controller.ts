@@ -28,14 +28,12 @@ export class BooksController {
     },
   ) {
     try {
-      // Map to nested create format
       const { authorId, quantity, ...rest } = body;
       const data: Prisma.BookCreateInput = {
         ...rest,
         author: { connect: { id: authorId } },
       };
       
-      // Always set quantity explicitly (default to 0 if not provided or invalid)
       let quantityValue = 0;
       if (quantity !== undefined && quantity !== null) {
         const quantityNum = Number(quantity);
@@ -78,7 +76,6 @@ export class BooksController {
     const { authorId, quantity, ...rest } = body;
     const data: Prisma.BookUpdateInput = { ...rest };
     
-    // Ensure quantity is always a number if provided (including 0)
     if (quantity !== undefined && quantity !== null) {
       const quantityNum = Number(quantity);
       if (!isNaN(quantityNum)) {

@@ -61,7 +61,6 @@ function EditBookForm({ isOpen, onClose, book, authors, onSuccess }) {
         authorId: parseInt(formData.authorId),
       }
 
-      // Handle quantity - ensure it's always a valid number
       const quantityStr = String(formData.quantity || '0').trim()
       const quantityValue = quantityStr === '' ? 0 : parseInt(quantityStr, 10)
       if (!isNaN(quantityValue) && quantityValue >= 0) {
